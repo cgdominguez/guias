@@ -1,10 +1,10 @@
----------------------------------------COMANDO BASICOS---------------------
+------------------------------------------COMANDO BASICOS---------------------
 
     pwd  {rama main de las carmetas}
 
     touch archivo.exe {nos permite crear archivos nuevos, p.ej. touch NuevoArchivo.txt}
 
-    cat archivo {nos permite ver el contenido de un archivo, p.ej. cat NuevoArchivo.txt}
+    cat archivo.exe {nos permite ver el contenido de un archivo, p.ej. cat NuevoArchivo.txt}
 
     ls {listado de carpetas en la ubicacion}
 
@@ -60,48 +60,8 @@
 
     git rm --cahed nombre_archivo/carpeta {remueve en estado de confirmacion del comando add para pasarlo solo a un estado previo a la confirmacion en memoria}
     
-   ---- COMMIT
 
-        git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
-
-        git commit -m "mensaje proporcionando informacion del commit"
-
-        git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
-
-    git log archivo {podemos ver el historial de los commit del mismo}
-
-    git log --stat { muestas las modificaciones espesificas}
-    con la letra Q salimos.
-
-    git diff ajdhg7adg85g97dg9adg  sajngnsgsugya6dsg65 {las lineas alfanumericas son del mismo log donde extraemos las lineas de distintas etapas de commit para compararlas entre si espesificamente}
-
-    git reset  ajdhg7adg85g97dg9adg --hard  {vuelve completmente todo el trabajo al estado del commit ue figura en la linea 
-    alfanumerica la cual pude ser del pasado borrando todo lo ue se haya echo posterior a ese commit lo actual }
-
-    git reset  ajdhg7adg85g97dg9adg --soft {vuelve a su estado en la historia sin eliminar es estado en memoria }
-
-    git checkout ajdhg7adg85g97dg9adg archivo.txt {trae el archivo del commit llamado al pc no hacer add o commit para evitar perder }
-
-    git checkout master/main archivo.txt {vuelve el archivo del estado original el ultimo del main del commit}
-
-    it log --oneline - Te muestra el id commit y el título del commit.
-    git log --decorate- Te muestra donde se encuentra el head point en el log.
-    git log --stat - Explica el número de líneas que se cambiaron brevemente.
-    git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
-    git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
-    git log --graph --oneline --decorate y
-    git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
-    git log -3 - Limitamos el número de commits.
-    git log --after=“2018-1-2” ,
-    git log --after=“today” y
-    git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
-    git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
-    git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
-    git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
-    git log – index.html- Busca los commits en un archivo en específico.
-    git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
-    git log > log.txt - guardar los logs en un archivo txt
-
+    
 
     git fetch {actualizacion a la ultima verciondel repositorio remoto al repositorio local sin cambiar archivos}
 
@@ -111,9 +71,73 @@
 
     git push {se envian todos los datos al repositorio remoto}
 
+------------------------------------------COMMIT-----------------
 
- 
----------------------------------------------------- branch ramas----------------------------
+ git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
+
+ git com mit -m "mensaje proporcionando informacion del commit"
+
+ git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
+
+------------------------------------------HISTORIAL--------------
+    HISTORIAL
+        gitk { historial visto desde un programa} 
+
+        git log --all --graph  {nos permite ingresar al historial especifico de los commit}
+
+        git log --all --graph --decorate --oneline {al igual que el comando anterir, con diferencia que nos resumen en una linea }
+
+        git log archivo {podemos ver el historial de los commit del mismo}
+
+        git log --stat { muestas las modificaciones espesificas}
+        con la letra Q salimos.
+
+        git diff ajdhg7adg85g97dg9adg  sajngnsgsugya6dsg65 {las lineas alfanumericas son del mismo log donde extraemos las lineas de distintas etapas de commit para compararlas entre si espesificamente}
+
+        git reset  ajdhg7adg85g97dg9adg --hard  {vuelve completmente todo el trabajo al estado del commit ue figura en la linea 
+        alfanumerica la cual pude ser del pasado borrando todo lo ue se haya echo posterior a ese commit lo actual }
+
+        git reset  ajdhg7adg85g97dg9adg --soft {vuelve a su estado en la historia sin eliminar es estado en memoria }
+
+        git checkout ajdhg7adg85g97dg9adg archivo.txt {trae el archivo del commit llamado al pc no hacer add o commit para evitar perder }
+
+        git checkout master/main archivo.txt {vuelve el archivo del estado original el ultimo del main del commit}
+
+        it log --oneline - Te muestra el id commit y el título del commit.
+        git log --decorate- Te muestra donde se encuentra el head point en el log.
+        git log --stat - Explica el número de líneas que se cambiaron brevemente.
+        git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+        git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
+        git log --graph --oneline --decorate y
+        git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
+        git log -3 - Limitamos el número de commits.
+        git log --after=“2018-1-2” ,
+        git log --after=“today” y
+        git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
+        git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
+        git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
+        git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+        git log – index.html- Busca los commits en un archivo en específico.
+        git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
+        git log > log.txt - guardar los logs en un archivo txt
+
+    /// estado de versiones conocido como tag 
+    git tag -a nombre -m "mensaje" hast(numero de commit usado desde [git log --all --graph --decorate --oneline]  en   donde aparece la abreviatura de los codigos de commit) {nos permite guardar versiones espesificas}
+    ejemplo:
+    git tag -a v0.1 -m "vercion oficial del proyecto antes de la modificacion tal " 1518a92
+
+    git tag  {muestra los tag existentes en lista}
+
+    git show-ref --tags {nos muetra de manera compreta de donde proviene el tag}
+
+    git push origin --tags {envia a origin todos los tag existentes}
+
+    /// eliminar tag
+    git tags -d nombretag {elimina el tag de manera local}
+
+    git push origin :ref/tags/nombretag {elimina el tag de manera remota servewr remote}
+
+------------------------------------------branch ramas----------------------------
     ///la creacion de rama se crean apartir donde estoy ubcado en la terminal , el directorio.
 
     git branch -m nombre { se puede modificar el nombre la rama principal}
@@ -125,7 +149,13 @@
     git checkout nombre_rama {al crear una nueva rama se puede situar solo en la rama creada con este comando, de esta manera se puede escribir sobre esta rama }
     !! se perderan los archivos al cambiar de rama al no hacer commit en la rama  !!
 
-----------------------------------------fucion o merge ---------------------------------
+    git show-branch {muetra el historial de las ramas y sus modificaciones}
+
+    git show-branch --all {muestas el historia de las ramas mas especifico}
+    
+    gitk {programa para visualizar el historial}
+
+------------------------------------------fucion o merge ---------------------------------
     ///las ramas se pueden fucinar para acoplar cada modificacion de las ramas tanto main como la nueva , 
     al hacer esta modificacion de fucinar las ramas se debe tener en cuneta que se debe estar posicionado en la rama principal para quede la fucion de las ramas ya definidas en la principal del proyecto
     para la fucion seguir los pasos:
@@ -135,72 +165,70 @@
     git commit (en su caso)
     git merge nombre_rama "mensaje de informacion" {un merge es una especie de commit, por ende se solicia enviar un mesaje informativo}
 
-/// tambien se pude hacer un merge desde el main a la rama, esto implica tener en dos ramas con la misma version
+    /// tambien se pude hacer un merge desde el main a la rama, esto implica tener en dos ramas con la misma version
 
-    !! conflictos con el merge . MODIFICACIONES EN LAS MISMAS LINEAS. EN ESTE CASO TE PERMITE ELEJIR QUE MODIFICACIONES ACEPTAR , UNA VEZ CONFIRMADO CUAL ES EL CORRECTO SE HACE:
+        !! conflictos con el merge . MODIFICACIONES EN LAS MISMAS LINEAS. EN ESTE CASO TE PERMITE ELEJIR QUE MODIFICACIONES ACEPTAR , UNA VEZ CONFIRMADO CUAL ES EL CORRECTO SE HACE:
 
-    git status
-    git commit -am "mensaje" 
+        git status
+        git commit -am "mensaje" 
 
-    Esto permitira guardar los datos que se se aceptaron dejando de lado los conflitivos
+        Esto permitira guardar los datos que se se aceptaron dejando de lado los conflitivos
 
-------------------------------- llaves de encriptacion-----------------------------
-/// ir al home en la terminal 
+------------------------------------------llaves de encriptacion-----------------------------
+    /// creacion de llave
+        ir al home en la terminal 
 
- ssh-keygen -t rsa -b 4096 -C "correo electronico" {enter, se genera la llave y muestra la ubicacion en la llave privada/publica confirmamos nuevamente con enter}
+        ssh-keygen -t rsa -b 4096 -C "correo electronico" {enter, se genera la llave y muestra la ubicacion en la llave privada/publica confirmamos nuevamente con enter}
 
-/// se nos solicitara una contraseña , (enter), se permite no ingresar contraseña
+    /// se nos solicitara una contraseña , (enter), se permite no ingresar contraseña
 
- id_rsa {es la llave privada}
- id_rsa.pub 
-///una vez ejecutado la configuracion, nos diriguimos a la carpeta designada para su guarda , ahi encontraremos dos archivos
+    id_rsa {es la llave privada}
+    id_rsa.pub 
+        ///una vez ejecutado la configuracion, nos diriguimos a la carpeta designada para su guarda , ahi encontraremos dos archivos
 
-/// verificador de llaves ssh, se verificara si se encuentra activa
+    /// verificador de llaves ssh, se verificara si se encuentra activa
 
- eval $(ssh-agent -s)
+    eval $(ssh-agent -s)
 
-/// agregar la llave en local  
+    /// agregar la llave en local  
 
-  alt+ 126 = ~ {~ es la variable con la direccion del home "c:/user/admin" }
+    alt+ 126 = ~ {~ es la variable con la direccion del home "c:/user/admin" }
 
- ssh-add ~/.ssh/id_rsa {se menciona la direccion y el archivo de la llave privada}
+    ssh-add ~/.ssh/id_rsa {se menciona la direccion y el archivo de la llave privada}
 
-/// Agregar a github la llave publica de repositorio local 
- -ingresamos a github 
- -vamos a laseccion de setting/llaves ssh/ agregar llave
- -copiamos la llave publica y la agregamos con una descripcion espesifica de la ubicacion 
- -guardamos
+    /// Agregar a github la llave publica de repositorio local 
+    -ingresamos a github 
+    -vamos a laseccion de setting/llaves ssh/ agregar llave
+    -copiamos la llave publica y la agregamos con una descripcion espesifica de la ubicacion 
+    -guardamos
 
-/// vincular al local el remoto .desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
+    /// vincular al local el remoto .desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
 
- git remote add origin git@github.com:cgdominguez/guias.git {se vinculacon la cuenta de github, en el caso ue no se pueda provar con https }
- git remote {se verifica que origen es github}
- origin
+    git remote add origin git@github.com:cgdominguez/guias.git {se vinculacon la cuenta de github, en el caso ue no se pueda provar con https }
+    git remote {se verifica que origen es github}
+    origin
 
- git remote -v {de forma verval ue es origin}
-    origin  https://github.com/cgdominguez/guias.git (fetch) traer
-    origin  https://github.com/cgdominguez/guias.git (push) llevar 
+    git remote -v {de forma verval ue es origin}
+        origin  https://github.com/cgdominguez/guias.git (fetch) traer
+        origin  https://github.com/cgdominguez/guias.git (push) llevar 
 
-// puede que no funcine el push xq  en origin puede ser ue se hayan cambiado datos
+    /// puede que no funcine el push xq  en origin puede ser ue se hayan cambiado datos
 
-git push origin main { estamos indicando ue se envie a orgin la rama main}
+    git push origin main { estamos indicando ue se envie a orgin la rama main}
 
-git pull origin main {traemos desde origen a main}
+    git pull origin main {traemos desde origen a main}
 
-git pull origin main --allow-unrelated-histories {fusiona las historias del origin al local }
+    git pull origin main --allow-unrelated-histories {fusiona las historias del origin al local}
 
+------------------------------------------CLONAR REPOSITORIOS
+ En el repositorio de github en la parte del proyecto nos posicionamos en él y copi el https o ssh  del mismo,
 
+ git clone https o ssh 
 
-
-
-
-
-
-
-
-
-
-
+------------------------------------------ agregar personal al repocitorio
+ En github en el repocitorio/setting/colaboradores/agregar email del colaborador
+ !! en el caso de Que el email no sea publico se solicita el nombre de usuario 
+ 
 
 
 
@@ -208,13 +236,13 @@ git pull origin main --allow-unrelated-histories {fusiona las historias del orig
 
 
 
+------------------------------------------FLUJO DE TRABAJO
+ 
 
+-----------------------------------------ATAJOS---------------------
+ git log --all --graph --decorate --oneline {al igual que el comando anterir, con diferencia que nos resumen en una linea }
 
-
-
-
-
-
+ alias nombre="git log --all --graph --decorate --oneline" {conviete nombre en una especie de variable }
 
 
 
@@ -226,25 +254,32 @@ git pull origin main --allow-unrelated-histories {fusiona las historias del orig
 
 
 
-Generar una nueva llave SSH: (Cualquier sistema operativo)
 
-ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 
-Comprobar proceso y agregarlo (Windows)
 
-eval $(ssh-agent - s)
-ssh-add ~/.ssh/id_rsa
-Comprobar proceso y agregarlo (Mac)
 
-eval "$(ssh-agent -s)"
-¿Usas macOS Sierra 10.12.2 o superior?
-Haz lo siguiente:
 
-cd ~/.ssh
-Crea un archivo config…
-Con Vim vim config
-Con VSCode code config
-Pega la siguiente configuración en el archivo…
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
