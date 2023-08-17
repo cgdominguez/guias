@@ -1,0 +1,17 @@
+git init {crear repocitorio carpeta prncipal, ubicarse en la carpeta ue se desee hacer commit}
+
+git status {estado del repositorio}
+
+git add archivo/carpeta {confirma, prepara los archivos para continuar con el envio al repositorio LOCAL, se encuentran confirmados(verde) a la espera de commit}
+
+git pull {es una convinacion de estos dos ultimos}
+
+git push {se envian todos los datos al repositorio remoto}
+
+/// buenas practicas
+
+hacer pull cada vez que hagamos commit o push
+
+al trabajar con un equipo se debe trabajar desde la rama asignada 
+
+
