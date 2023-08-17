@@ -1,170 +1,188 @@
+---------------------------------------COMANDO BASICOS---------------------
 
-pwd  {rama main de las carmetas}
+    pwd  {rama main de las carmetas}
 
-touch archivo.exe {nos permite crear archivos nuevos, p.ej. touch NuevoArchivo.txt}
+    touch archivo.exe {nos permite crear archivos nuevos, p.ej. touch NuevoArchivo.txt}
 
-cat archivo {nos permite ver el contenido de un archivo, p.ej. cat NuevoArchivo.txt}
+    cat archivo {nos permite ver el contenido de un archivo, p.ej. cat NuevoArchivo.txt}
 
-ls {listado de carpetas en la ubicacion}
+    ls {listado de carpetas en la ubicacion}
 
-ls -al { permite ver el estado de las carpetas con respecto a seguridad y datos espesificos }
+    ls -al { permite ver el estado de las carpetas con respecto a seguridad y datos espesificos }
 
-ls -l {Ver todos los archivos como una lista en donde incluye el usuario, grupo, permisos sobre el archivo, tamaño, fecha y hora de creación.}
+    ls -l {Ver todos los archivos como una lista en donde incluye el usuario, grupo, permisos sobre el archivo, tamaño, fecha y hora de creación.}
 
-ls -lh {Muestra la misma información que ls-l pero con unidades de tamaño, es decir, kb o mb.}
+    ls -lh {Muestra la misma información que ls-l pero con unidades de tamaño, es decir, kb o mb.}
 
-ls-R {muestra el contenido de todos los sudirectorios de forma recursiva}
+    ls-R {muestra el contenido de todos los sudirectorios de forma recursiva}
 
-ls -S {Ordena los resultados por tamaño de archivo.}
+    ls -S {Ordena los resultados por tamaño de archivo.}
 
-cd carpeta {entrar a la carpeta mencionada}
+    cd carpeta {entrar a la carpeta mencionada}
 
-cd .. {se puede volver una carpeta atras}
+    cd .. {se puede volver una carpeta atras}
 
-cd - {nos lleva directamente al ultimo directorio visitado}
+    cd - {nos lleva directamente al ultimo directorio visitado}
 
-rmdir “nombre del directorio”/: borrar un directorio: Solo funciona con directorios vacíos.
+    rmdir “nombre del directorio”/: borrar un directorio: Solo funciona con directorios vacíos.
 
-rm -r ‘nombre de la carpeta’ :me permite eliminar la carpeta y los archivos dentro de ella de forma recursiva.
+    rm -r ‘nombre de la carpeta’ :me permite eliminar la carpeta y los archivos dentro de ella de forma recursiva.
 
-cp  {“nombre del archivo que quremos copiar” “nombre del directorio a donde lo queremos copiar”: nos permite copiar un archivo.}
+    cp  {“nombre del archivo que quremos copiar” “nombre del directorio a donde lo queremos copiar”: nos permite copiar un archivo.}
 
-mv   {“el directorio de donde queremos mover/el nombre del archivo” “el directorio hacia donde lo queremos mover”: nos permite mover un archivo.}
+    mv   {“el directorio de donde queremos mover/el nombre del archivo” “el directorio hacia donde lo queremos mover”: nos permite mover un archivo.}
 
 
-clear {nos permite limpiar la pantalla.}
+    clear {nos permite limpiar la pantalla.}
 
-history {ver los últimos comandos que ejecutamos y un número especial con el que podemos volver a repetir el comando.}
+    history {ver los últimos comandos que ejecutamos y un número especial con el que podemos volver a repetir el comando.}
 
 
 ------------------------------------------REPOSITORIO  GIT ----------------------
 
-git init {crear repocitorio carpeta prncipal, ubicarse en la carpeta ue se desee hacer commit}
+    git init {crear repocitorio carpeta prncipal, ubicarse en la carpeta ue se desee hacer commit}
 
-git status {estado del repositorio}
+    git status {estado del repositorio}
 
-git config {proporciona informacion de las confiiguraciones}
+    git config {proporciona informacion de las confiiguraciones}
 
-git config -l  {lista de de configuraciones locales}
+    git config -l  {lista de de configuraciones locales}
 
-git config --list {muestra en forma de lista las configuraciones esenciales}
+    git config --list {muestra en forma de lista las configuraciones esenciales}
 
-git config --list --show-origin {ver donde se encuentra la configuracion espesificas de cada }
+    git config --list --show-origin {ver donde se encuentra la configuracion espesificas de cada }
 
-git config --global user.name "nuevo nombre"{ en este caso se reuiere configurar una variable global de usuario. modificar usario }
+    git config --global user.name "nuevo nombre"{ en este caso se reuiere configurar una variable global de usuario. modificar usario }
 
-git add archivo/carpeta {confirma, prepara los archivos para continuar con el envio al repositorio LOCAL, se encuentran confirmados(verde) a la espera de commit}
+    git add archivo/carpeta {confirma, prepara los archivos para continuar con el envio al repositorio LOCAL, se encuentran confirmados(verde) a la espera de commit}
 
-git add . {permite confirmar el comit de todas las carpetas para hacer commit}
+    git add . {permite confirmar el comit de todas las carpetas para hacer commit}
 
-git rm --cahed nombre_archivo/carpeta {remueve en estado de confirmacion del comando add para pasarlo solo a un estado previo a la confirmacion en memoria}
+    git rm --cahed nombre_archivo/carpeta {remueve en estado de confirmacion del comando add para pasarlo solo a un estado previo a la confirmacion en memoria}
 
-git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
+    git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
 
-git commit -m "mensaje proporcionando informacion del commit"
+    git commit -m "mensaje proporcionando informacion del commit"
 
-git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
+    git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
 
-git log archivo {podemos ver el historial de los commit del mismo}
+    git log archivo {podemos ver el historial de los commit del mismo}
 
-git log --stat { muestas las modificaciones espesificas}
-con la letra Q salimos.
+    git log --stat { muestas las modificaciones espesificas}
+    con la letra Q salimos.
 
-git diff ajdhg7adg85g97dg9adg  sajngnsgsugya6dsg65 {las lineas alfanumericas son del mismo log donde extraemos las lineas de distintas etapas de commit para compararlas entre si espesificamente}
+    git diff ajdhg7adg85g97dg9adg  sajngnsgsugya6dsg65 {las lineas alfanumericas son del mismo log donde extraemos las lineas de distintas etapas de commit para compararlas entre si espesificamente}
 
-git reset  ajdhg7adg85g97dg9adg --hard  {vuelve completmente todo el trabajo al estado del commit ue figura en la linea 
-alfanumerica la cual pude ser del pasado borrando todo lo ue se haya echo posterior a ese commit lo actual }
+    git reset  ajdhg7adg85g97dg9adg --hard  {vuelve completmente todo el trabajo al estado del commit ue figura en la linea 
+    alfanumerica la cual pude ser del pasado borrando todo lo ue se haya echo posterior a ese commit lo actual }
 
-git reset  ajdhg7adg85g97dg9adg --soft {vuelve a su estado en la historia sin eliminar es estado en memoria }
+    git reset  ajdhg7adg85g97dg9adg --soft {vuelve a su estado en la historia sin eliminar es estado en memoria }
 
-git checkout ajdhg7adg85g97dg9adg archivo.txt {trae el archivo del commit llamado al pc no hacer add o commit para evitar perder }
+    git checkout ajdhg7adg85g97dg9adg archivo.txt {trae el archivo del commit llamado al pc no hacer add o commit para evitar perder }
 
-git checkout master/main archivo.txt {vuelve el archivo del estado original el ultimo del main del commit}
+    git checkout master/main archivo.txt {vuelve el archivo del estado original el ultimo del main del commit}
 
-it log --oneline - Te muestra el id commit y el título del commit.
-git log --decorate- Te muestra donde se encuentra el head point en el log.
-git log --stat - Explica el número de líneas que se cambiaron brevemente.
-git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
-git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
-git log --graph --oneline --decorate y
-git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
-git log -3 - Limitamos el número de commits.
-git log --after=“2018-1-2” ,
-git log --after=“today” y
-git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
-git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
-git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
-git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
-git log – index.html- Busca los commits en un archivo en específico.
-git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
-git log > log.txt - guardar los logs en un archivo txt
+    it log --oneline - Te muestra el id commit y el título del commit.
+    git log --decorate- Te muestra donde se encuentra el head point en el log.
+    git log --stat - Explica el número de líneas que se cambiaron brevemente.
+    git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+    git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
+    git log --graph --oneline --decorate y
+    git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
+    git log -3 - Limitamos el número de commits.
+    git log --after=“2018-1-2” ,
+    git log --after=“today” y
+    git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
+    git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
+    git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
+    git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+    git log – index.html- Busca los commits en un archivo en específico.
+    git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
+    git log > log.txt - guardar los logs en un archivo txt
 
 
-git fetch {actualizacion a la ultima verciondel repositorio remoto al repositorio local sin cambiar archivos}
+    git fetch {actualizacion a la ultima verciondel repositorio remoto al repositorio local sin cambiar archivos}
 
-git merge {cambian los archivos recividos del fetch al local }
+    git merge {cambian los archivos recividos del fetch al local }
 
-git pull {es una convinacion de estos dos ultimos}
+    git pull {es una convinacion de estos dos ultimos}
 
-git push {se envian todos los datos al repositorio remoto}
+    git push {se envian todos los datos al repositorio remoto}
 
 
  
 ---------------------------------------------------- branch ramas----------------------------
-///la creacion de rama se crean apartir donde estoy ubcado en la terminal , el directorio.
+    ///la creacion de rama se crean apartir donde estoy ubcado en la terminal , el directorio.
 
-git branch {muestra las ramas existentes y en que rama nos encontramos}
- 
- git branch nombre_de_la_nueva_rama {crea dos ramas en paralelo} 
+    git branch {muestra las ramas existentes y en que rama nos encontramos}
+    
+    git branch nombre_de_la_nueva_rama {crea dos ramas en paralelo} 
 
- git checkout nombre_rama {al crear una nueva rama se puede situar solo en la rama creada con este comando, de esta manera se puede escribir sobre esta rama }
- !! se perderan los archivos al cambiar de rama al no hacer commit en la rama  !!
+    git checkout nombre_rama {al crear una nueva rama se puede situar solo en la rama creada con este comando, de esta manera se puede escribir sobre esta rama }
+    !! se perderan los archivos al cambiar de rama al no hacer commit en la rama  !!
 
 ----------------------------------------fucion o merge ---------------------------------
-///las ramas se pueden fucinar para acoplar cada modificacion de las ramas tanto main como la nueva , 
-al hacer esta modificacion de fucinar las ramas se debe tener en cuneta que se debe estar posicionado en la rama principal para quede la fucion de las ramas ya definidas en la principal del proyecto
-para la fucion seguir los pasos:
+    ///las ramas se pueden fucinar para acoplar cada modificacion de las ramas tanto main como la nueva , 
+    al hacer esta modificacion de fucinar las ramas se debe tener en cuneta que se debe estar posicionado en la rama principal para quede la fucion de las ramas ya definidas en la principal del proyecto
+    para la fucion seguir los pasos:
 
-git checkout main 
-git status
-git commit (en su caso)
-git merge nombre_rama "mensaje de informacion" {un merge es una especie de commit, por ende se solicia enviar un mesaje informativo}
+    git checkout main 
+    git status
+    git commit (en su caso)
+    git merge nombre_rama "mensaje de informacion" {un merge es una especie de commit, por ende se solicia enviar un mesaje informativo}
 
 /// tambien se pude hacer un merge desde el main a la rama, esto implica tener en dos ramas con la misma version
 
-!! conflictos con el merge . MODIFICACIONES EN LAS MISMAS LINEAS. EN ESTE CASO TE PERMITE ELEJIR QUE MODIFICACIONES ACEPTAR , UNA VEZ CONFIRMADO CUAL ES EL CORRECTO SE HACE:
+    !! conflictos con el merge . MODIFICACIONES EN LAS MISMAS LINEAS. EN ESTE CASO TE PERMITE ELEJIR QUE MODIFICACIONES ACEPTAR , UNA VEZ CONFIRMADO CUAL ES EL CORRECTO SE HACE:
 
-git status
-git commit -am "mensaje" 
+    git status
+    git commit -am "mensaje" 
 
-Esto permitira guardar los datos que se se aceptaron dejando de lado los conflitivos
+    Esto permitira guardar los datos que se se aceptaron dejando de lado los conflitivos
 
 ------------------------------- llaves de encriptacion-----------------------------
 /// ir al home en la terminal 
 
-ssh-keygen -t rsa -b 4096 -C "correo electronico" {enter, se genera la llave y muestra la ubicacion en la llave privada/publica confirmamos nuevamente con enter}
+ ssh-keygen -t rsa -b 4096 -C "correo electronico" {enter, se genera la llave y muestra la ubicacion en la llave privada/publica confirmamos nuevamente con enter}
 
 /// se nos solicitara una contraseña , (enter), se permite no ingresar contraseña
 
-id_rsa {es la llave privada}
-id_rsa.pub 
+ id_rsa {es la llave privada}
+ id_rsa.pub 
 ///una vez ejecutado la configuracion, nos diriguimos a la carpeta designada para su guarda , ahi encontraremos dos archivos
 
 /// verificador de llaves ssh, se verificara si se encuentra activa
 
-eval $(ssh-agent -s)
+ eval $(ssh-agent -s)
 
-/// agregar la llave en local
+/// agregar la llave en local  
 
-alt+ 126 = ~ {~ es la variable con la direccion del home "c:/user/admin" }
+  alt+ 126 = ~ {~ es la variable con la direccion del home "c:/user/admin" }
 
-ssh-add ~/.ssh/id_rsa {se menciona la direccion y el archivo de la llave privada}
+ ssh-add ~/.ssh/id_rsa {se menciona la direccion y el archivo de la llave privada}
 
-/// desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
+/// Agregar a github la llave publica de repositorio local 
+ -ingresamos a github 
+ -vamos a laseccion de setting/llaves ssh/ agregar llave
+ -copiamos la llave publica y la agregamos con una descripcion espesifica de la ubicacion 
+ -guardamos
+
+/// vincular al local el remoto .desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
 
  git remote add origin git@github.com:cgdominguez/guias.git {ya se encuentra vinvulado con la cuenta de github}
+ git remote {se verifica que origen es github}
+ origin
 
- 
+ git remote -v {de forma verval ue es origin}
+    origin  https://github.com/cgdominguez/guias.git (fetch) traer
+    origin  https://github.com/cgdominguez/guias.git (push) llevar 
+
+
+
+
+
+
+
 
 
 
