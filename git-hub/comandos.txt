@@ -59,12 +59,14 @@
     git add . {permite confirmar el comit de todas las carpetas para hacer commit}
 
     git rm --cahed nombre_archivo/carpeta {remueve en estado de confirmacion del comando add para pasarlo solo a un estado previo a la confirmacion en memoria}
+    
+   ---- COMMIT
 
-    git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
+        git commit {cumple la funcion para confirmar y enviar la documentacion al repositorio LOCAL, las buenas practicas reuieren de un mensaje proximo ejemplo}
 
-    git commit -m "mensaje proporcionando informacion del commit"
+        git commit -m "mensaje proporcionando informacion del commit"
 
-    git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
+        git commit -am "mesaje commit" {se realiza el commit del git status a los archivos previamente subido al espacio en memoria, no funciona si no se a echo add a los archivos}
 
     git log archivo {podemos ver el historial de los commit del mismo}
 
@@ -113,6 +115,8 @@
  
 ---------------------------------------------------- branch ramas----------------------------
     ///la creacion de rama se crean apartir donde estoy ubcado en la terminal , el directorio.
+
+    git branch -m nombre { se puede modificar el nombre la rama principal}
 
     git branch {muestra las ramas existentes y en que rama nos encontramos}
     
@@ -169,13 +173,21 @@
 
 /// vincular al local el remoto .desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
 
- git remote add origin git@github.com:cgdominguez/guias.git {ya se encuentra vinvulado con la cuenta de github}
+ git remote add origin git@github.com:cgdominguez/guias.git {se vinculacon la cuenta de github, en el caso ue no se pueda provar con https }
  git remote {se verifica que origen es github}
  origin
 
  git remote -v {de forma verval ue es origin}
     origin  https://github.com/cgdominguez/guias.git (fetch) traer
     origin  https://github.com/cgdominguez/guias.git (push) llevar 
+
+// puede que no funcine el push xq  en origin puede ser ue se hayan cambiado datos
+
+git push origin main { estamos indicando ue se envie a orgin la rama main}
+
+git pull origin main {traemos desde origen a main}
+
+git pull origin main --allow-unrelated-histories {fusiona las historias del origin al local }
 
 
 
