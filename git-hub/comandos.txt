@@ -237,6 +237,43 @@
 
 
 ------------------------------------------FLUJO DE TRABAJO
+
+ En un ambito laboral se destinaran branch ramas para cada programador las buenas practicas dictan que cada uno debe hacer un pull de su respectiva rama ejem:
+programador 1:
+git pull origin main {traer lo ultimo echo en la rama main}
+git checkout rama_asignada_1 {nos movemos a la linea de tiempo de la rama asignada}
+git pull origin rama asignada {se solicita todo el trabajo realizado en la rama para comenzar, continuar, con la tarea}
+
+
+programador 2:
+git pull origin main {traer lo ultimo echo en la rama main}
+git checkout rama_asignada_2 {nos movemos a la linea de tiempo de la rama asignada}
+git pull origin rama_asignada {se solicita todo el trabajo realizado en la rama para comenzar, continuar, con la tarea}
+
+
+
+Una vez realizada las respectivas tareas, la buenas practicas dictan que el encargado debe hacer merge de las ramas al mater/main del proyecto, ejem:
+
+administrador del proyecto:
+git pull origin rama_asignada_1 
+git pull origin main {al fucionar ramas nos debemos situar en la rama main }
+git checkout main
+git merge rama_asignada_1 "mensaje"
+
+
+-------------------------------------------COPIAR CARPETA DEL REPOSITORIO
+
+ ir a home y poner el comando 
+ git clone HTTPS ó ssh {colocamos la direccion del repocitorio}
+ 
+
+
+
+
+
+
+
+ 
  
 
 -----------------------------------------ATAJOS---------------------

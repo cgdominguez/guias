@@ -14,4 +14,13 @@ hacer pull cada vez que hagamos commit o push
 
 al trabajar con un equipo se debe trabajar desde la rama asignada 
 
+---------------------------------------GIT IGNONE 
+.gitignore es una carpeta que se encuentra en la carpeta raiz del proyecto, esto nos permite ignorar a la hora de subir al repositorio remoto carpetas /archivos  privados que no deben ser compartidos con terceros
+
+
+---------------------------------------README.MD
+
+NOS PERMITE AGREGAR UN MENSAJE GENAL EN EL PROYECTO, DESCRIPCIONES , COMO UN "QUIENES SOMOS"
+HAY PAGINAS PARA PODER DISEÑAR DE MANER AGIL WWW.PANDA.GITHUB.IO
+
 
