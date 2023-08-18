@@ -199,12 +199,12 @@
     /// Agregar a github la llave publica de repositorio local 
     -ingresamos a github 
     -vamos a laseccion de setting/llaves ssh/ agregar llave
-    -copiamos la llave publica y la agregamos con una descripcion espesifica de la ubicacion 
+    -copiamos la llave publica y la agregamos con una descripcion espesifica de la ubicacion fisica eje:casa/trabajo/pcportatil etc.
     -guardamos
 
-    /// vincular al local el remoto .desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
+    /// vincular al local el remoto desde github.com copiar la llaver web ssh ,e ingresarla en los siguietes comandos
 
-    git remote add origin git@github.com:cgdominguez/guias.git {se vinculacon la cuenta de github, en el caso ue no se pueda provar con https }
+    git remote add origin git@github.com:cgdominguez/guias.git {origin es un nombre aleatoreo .Se vincula con la cuenta de github, en el caso ue no se pueda provar con https }
     git remote {se verifica que origen es github}
     origin
 
