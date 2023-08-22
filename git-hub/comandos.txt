@@ -140,6 +140,10 @@
 ------------------------------------------branch ramas----------------------------
     ///la creacion de rama se crean apartir donde estoy ubcado en la terminal , el directorio.
 
+    git branch -r {nos permite ver las ramas en remoto rojo}
+
+    git branch -a {todas las ramas blanco local , rojo remoto}
+
     git branch -m nombre { se puede modificar el nombre la rama principal}
 
     git branch {muestra las ramas existentes y en que rama nos encontramos}
@@ -267,19 +271,30 @@ git merge rama_asignada_1 "mensaje"
  git clone HTTPS ó ssh {colocamos la direccion del repocitorio}
  
 
-
-
-
-
-
-
- 
- 
-
 -----------------------------------------ATAJOS---------------------
  git log --all --graph --decorate --oneline {al igual que el comando anterir, con diferencia que nos resumen en una linea }
 
  alias nombre="git log --all --graph --decorate --oneline" {conviete nombre en una especie de variable }
+
+----------------------------------------- ATAJOS comandos
+git shortlog -sn   {al igual ue shortlog, a difernecia que este nos muetra solo el nombre de los usuarrios que hcieron commit}
+
+git shortlog -sn --al { todos los commit los borrados tambien}
+
+git shortlog -sn --al --no-merge    {no incluir merge}
+
+// para crear un alias para este tipo de comandos exite la el siguiente comando 
+
+git config --global alias.nombre "comando a asignar ejem: git shortlog -sn --al --no-merge "
+
+git blame archivo.txt  { ver que usuario realizadon cambios en el archivo}
+
+git blame -c archivo.txt {mejor Orden}
+
+git blame --help  { nos envia a una paguina para saber mas sobre los comandos}
+
+git blame css/archivo.txt -L35,50 { se introducen los parametros para tener una especificidad}
+
 
 
 
